@@ -5,7 +5,7 @@ const Products = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:3001/products')
+        fetch('http://localhost:3099/products')
         .then(res => res.json())
         .then(data => setProducts(data))
     } ,[])
@@ -14,7 +14,7 @@ const Products = () => {
     const handleDeleteProduct = id =>{
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
-            const url = `http://localhost:3001/products/${id}`;
+            const url = `http://localhost:3099/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

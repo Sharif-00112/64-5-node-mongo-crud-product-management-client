@@ -6,7 +6,7 @@ const UpdateProduct = () => {
     const [product, setProduct] = useState({});
 
     useEffect(()=>{
-        const url = `http://localhost:3001/products/${id}`;
+        const url = `http://localhost:3099/products/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setProduct(data))
@@ -62,9 +62,18 @@ const UpdateProduct = () => {
         setProduct(UpdatedProduct);
     }
 
+    // const handleUpdateProduct = e =>{
+    //     e.preventDefault();
+    //     const url = `http://localhost:3099/products/${id}`;
+    //     fetch(url)
+    //     .then(res => res.json())
+    //     .then(data => console.log(data))
+    // }
+
+    //needs debugging
     const handleUpdateProduct = e =>{
         e.preventDefault();
-        const url = `http://localhost:3001/products/${id}`;
+        const url = `http://localhost:3099/products/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

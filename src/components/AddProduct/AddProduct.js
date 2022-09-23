@@ -19,7 +19,7 @@ const AddProduct = () => {
 
         const newProduct = {prodTitle, uom, color, price, stock};
 
-        fetch('http://localhost:3001/products', {
+        fetch('http://localhost:3099/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
