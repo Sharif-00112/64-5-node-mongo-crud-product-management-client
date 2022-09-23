@@ -34,7 +34,6 @@ const Products = () => {
     return (
         <div>
             <h2>Available Products: {products.length}</h2> 
-            <br />
 
             <ul>
                 {
